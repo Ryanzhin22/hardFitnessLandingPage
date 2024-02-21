@@ -29,6 +29,8 @@ header{
     padding: 30px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
@@ -39,6 +41,17 @@ header nav {
     justify-content: space-between;
     align-items: center;
     color: white;
+}
+
+.navMenu{
+    display: none;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.navMenu:hover{
+    color: #FEBD59;
+    transition: .2s;
 }
 
 .logo{
@@ -59,7 +72,12 @@ header nav ul li{
     transition: .2s;
 }
 
-header nav ul li:hover{
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+header nav ul li a:hover{
     color: #FEBD59;
     transition: .2s;
 }
@@ -116,6 +134,7 @@ header nav ul li:hover{
     justify-content: center;
     align-items: center;
     font-family: "Poppins", sans-serif;
+    
 }
 
 .extraAdvice-1 h1{
@@ -185,9 +204,11 @@ header nav ul li:hover{
 
 .plansWrapper{
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    grid-gap: 20px;
+    grid-template-rows:repeat(2, 1fr);
 }
 
 .plan{
@@ -308,12 +329,19 @@ header nav ul li:hover{
     display: flex;
     flex-direction: row;
     font-family: "Poppins", sans-serif;
+    width: 100%;
+    height: 100%;
     gap: 40px;
 }
 
 .rateUsText{
     width: 50%;
     padding: 10px 20px;
+}
+
+.rateUsImg{
+    display: flex;
+    justify-content: center;
 }
 
 .rateUsText h1{
@@ -368,83 +396,114 @@ header nav ul li:hover{
 
 /* Footer */
 
-footer{
-    background-color: #FEBD59;
+
+/* Responsivo */
+
+@media (max-width: 1300px){
+    .aboutUsText{
+        width: 100%;
+    }
+    .plansPricing{
+        height: 1100px;
+    }
+    .plansWrapper{
+        grid-template-columns: repeat(2,300px);
+    }
 }
 
-.footerWrapper{
-    display: flex;
-    flex-direction: row;
-    font-family: "Poppins", sans-serif;
-    gap: 20px;
+@media (max-width: 1000px){
+    header nav ul{
+        display: none;
+    }
+    .navMenu{
+        display: block;
+    }
+    .headerContent{
+        width: 70%;
+    }
+
+    .aboutUsContent{
+        width: 100%;
+    }
+
+    .extraAdvice-1 p, .extraAdvice-2 p{
+        font-size: 14px;
+    }
+
+    .rateUsContent .rateUsImg img{
+        width: 100%;
+        height: 100%;
+    }
 }
 
-.footerLogoSocials{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+@media (max-width: 750px){
+    .extraAdvice-1, .extraAdvice-2{
+        height: 18vh;
+    }
+    .extraAdvice-1 h1, .extraAdvice-2 h1{
+        border: none;
+    }
+    .containerAdvice{
+        flex-direction: column;
+        padding: 20px;
+        gap: 0px;
+        align-items: flex-start;
+    }
+    .plansPricingTitle{
+        font-size: 40px;
+        padding: 10px 0px;
+    }
+    .plansPricing{
+        height: 1900px;
+    }
+    .plansWrapper{
+        grid-template-columns: repeat(1,300px);
+    }
 }
 
-.footerLogoSocials img{
-    width: 200px;
-    height: 200px;
+@media (max-width: 550px){
+    .logo{
+        width: 100px;
+        height: 100px;
+    }
+    header nav{
+        height: 5vh;
+    }
+    .headerContent{
+        width: 100%;
+    }
+    .headerContent h1{
+        font-size: 30px;
+    }
+
+    .aboutUsText{
+        font-size: 14px;
+        padding: 20px;
+    }
+    .aboutUsText h1{
+        font-size: 25px;
+        padding-bottom: 5px;
+    }
+
+    .extraAdvice-1, .extraAdvice-2{
+        height: 22vh;
+    }
+
+    .rateUsText{
+        width: 100%;
+    }
+
+    .rateUsContent .rateUsImg{
+        display: none;
+    }
+
+    .plansPricingTitle{
+        font-size: 30px;
+    }
 }
 
-.socialMidias{
-    display: flex;
-    gap: 20px;
-}
-
-.footerLogoSocials .socialMidias i{
-    color: white;
-    cursor: pointer;
-}
-
-.footerAddress{
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-}
-
-.footerAddress h1{
-    font-size: 20px;
-}
-
-.footerContact input{
-    padding: 10px;
-    width: 300px;
-}
-
-.contactInputs{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-.submitText{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-}
-
-.submitText button{
-    border: none;
-    width: 200px;
-    height: 30px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
-
-}
-
-.footerContact textarea{
-    width: 620px;
-    height: 200px;
-    padding: 10px;
+@media (max-height: 900px){
+    .rateUsContent .rateUsImg{
+        height: 300px;
+    }
 }

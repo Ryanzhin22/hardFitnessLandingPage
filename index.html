@@ -15,14 +15,15 @@
     <header>
         <div class="container">
             <nav>
-                <img src="imgs/logo.png" alt="logo Hard Fitness" class="logo">
+                <a href="#"><img src="imgs/logo.png" alt="logo Hard Fitness" class="logo" ></a>
                 <ul>
-                    <li>Início</li>
-                    <li>Sobre nós</li>
-                    <li>Planos</li>
-                    <li>Avalie</li>
-                    <li>Contato</li>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#eAdvice1">Sobre nós</a></li>
+                    <li><a href="#plansPricing">Planos</a></li>
+                    <li><a href="#rateUs">Avalie</a></li>
+                    <li><a href="#">Contato</a></li>
                 </ul>
+                <div class="navMenu"><i class="fa-solid fa-bars fa-2x"></i></div>
             </nav>
             <div class="headerContent">
                 <h3>HARD FITNESS</h3>
@@ -33,13 +34,13 @@
         </div>
     </header>
     <main>
-        <div class="extraAdvice-1">
+        <div class="extraAdvice-1" id="eAdvice1">
             <div class="containerAdvice">
                 <h1>FITNESS</h1>
                 <p>Ir para academia melhora da saúde cardiovascular, aumenta a força e resistência muscular, melhora da saúde mental, melhora da qualidade do sono e previne doenças</p>
             </div>
         </div>
-        <section class="aboutUs">
+        <section class="aboutUs" id="aboutUs">
             <div class="aboutUsContent">
                 <div class="aboutUsText">
                     <h3>Bem-vindo à Hard Fitness</h3>
@@ -50,7 +51,7 @@
             </div>
         </section>
 
-        <section class="plansPricing">
+        <section class="plansPricing" id="plansPricing">
             <div class="container">
                 <h1 class="plansPricingTitle">Conheça nossos planos!</h1>
                 <div class="plansWrapper">
@@ -99,7 +100,7 @@
             </div>
         </section>
 
-        <section class="rateUs">
+        <section class="rateUs" id="rateUs">
             <div class="container">
                 <div class="rateUsContent">
                     <div class="rateUsText">
@@ -107,7 +108,9 @@
                         <p>Sua opinião é fundamental para nos ajudar a saber no que podemos melhorar! e também para outras pessoas ficarem sabendo do nosso trabalho.</p>
                         <button>Avalie-nos</button>
                     </div>
-                    <img src="https://placehold.co/600x400" alt="imagem de avaliação">
+                    <div class="rateUsImg">
+                        <img src="https://placehold.co/600x400" alt="imagem de avaliação">
+                    </div>
                 </div>
             </div>
         </section>
@@ -115,40 +118,14 @@
         <div class="extraAdvice-2">
             <div class="containerAdvice">
                 <h1>ENERGIA</h1>
-                <p>Participar de exercícios regulares pode aumentar os níveis de energia e reduzir a fadiga aumentando a resistência física, o que significa que você pode realizar atividades diárias com mais eficiência.</p>
+                <p>Participar de exercícios regulares pode aumentar os níveis de energia e reduzir a fadiga aumentando a resistência física, o que significa que você pode realizar atividades mais diárias</p>
             </div>
         </div>
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footerWrapper">
-                <div class="footerLogoSocials">
-                    <img src="imgs/logo.png" alt="logo hard fitness">
-                    <div class="socialMidias">
-                        <i class="fa-brands fa-instagram fa-2x"></i>
-                        <i class="fa-brands fa-facebook fa-2x"></i>
-                        <i class="fa-brands fa-whatsapp fa-2x"></i>
-                    </div>
-                </div>
-                <div class="footerAddress">
-                    <h1>Endereço: R. João Gomes Mota, 01 - Piso superior - Vila Antônio Augusto Luiz, Caçapava - SP, 12287-430</h1>
-                    <p>Número: (12) 99791-8005</p>
-                </div>
-                <div class="footerContact">
-                    <form>
-                        <div class="contactInputs">
-                            <input type="text" placeholder="Nome">
-                            <input type="email" placeholder="Email">
-                        </div>  
-                        <div class="submitText">
-                            <textarea name="ajuda" id="como podemos ajudar" cols="30" rows="10" placeholder="Como podemos ajudar"></textarea>
-                            <button type="submit">Enviar</button>
-                        </div>  
-                    </form>
-                </div>
-            </div>
-        </div>
+        
     </footer>
+
 </body>
 </html>
