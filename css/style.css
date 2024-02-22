@@ -393,9 +393,149 @@ header nav ul li a:hover{
     color: white;
 }
 
+/* Contato */
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+}
+
+.contactContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    height: 500px;
+    gap: 100px;
+}
+
+.contactText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 40%;
+    gap: 20px;
+}
+
+.contactText h1{
+    font-size: 40px
+}
+
+.email{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 400px;
+}
+
+.email i{
+    background-color: rgb(215, 215, 215);
+    width: 60px;
+    height: 50px;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email span{
+    color: #FEBD59;
+    font-weight: 600;
+}
+
+.sendMessage{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: #f1f0f0;
+    padding: 20px;
+    gap: 20px;
+}
+
+.sendMessage form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.sendMessage input, textarea{
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.textArea{
+    height: 100px;
+}
+
+.sendMessage input[type=submit]{
+    cursor: pointer;
+    width: 200px;
+    background-color: #ffdaa2;
+    color: white;
+    font-weight: 600;
+    font-family:  "Poppins", sans-serif;
+    transition: .3s;
+}
+
+.sendMessage input[type=submit]:hover{
+    background-color: #FEBD59;
+    transition: .3s;
+}
+
 
 /* Footer */
 
+footer{
+    background-color: #121212;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.containerFooter{
+    width: 500px;
+}
+
+.containerFooter h1{
+    padding-bottom: 20px;
+}
+
+.socialMedias{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 14px;
+}
+
+.copyright{
+    background-color: black;
+    height: 3vh;
+    color: white;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Responsivo */
 
@@ -408,6 +548,9 @@ header nav ul li a:hover{
     }
     .plansWrapper{
         grid-template-columns: repeat(2,300px);
+    }
+    .contactContent{
+        gap: 20px;
     }
 }
 
@@ -434,6 +577,12 @@ header nav ul li a:hover{
         width: 100%;
         height: 100%;
     }
+    .contactContent{
+        gap: 40px;
+    }
+    .sendMessage{
+        width: 350px;
+    }
 }
 
 @media (max-width: 750px){
@@ -458,6 +607,16 @@ header nav ul li a:hover{
     }
     .plansWrapper{
         grid-template-columns: repeat(1,300px);
+    }
+
+    .contact{
+        height: 1000px;
+    }
+    .contactContent{
+        flex-direction: column;
+    }
+    .contactText, .sendMessage{
+        width: 100%;
     }
 }
 
@@ -499,6 +658,13 @@ header nav ul li a:hover{
 
     .plansPricingTitle{
         font-size: 30px;
+    }
+
+    .contactText{
+        width: 300px;
+    }
+    .sendMessage{
+        width: 300px;
     }
 }
 
