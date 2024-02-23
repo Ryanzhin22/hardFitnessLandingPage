@@ -6,6 +6,33 @@
     box-sizing: border-box;
 }
 
+.btnTop{
+    position: fixed;
+    background-color: #FEBD59;
+    width: 70px;
+    height: 70px;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.visible{
+    visibility: visible;
+}
+
+.btnTop a{
+    padding: 17px 22px;
+}
+
+.btnTop a i{
+    color: white;
+}
+
 header{
     background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.5)), url("../imgs/bg_img-1.png");
     background-position: center;
@@ -103,7 +130,7 @@ header nav ul li a:hover{
     color: #FEBD59;
 }
 
-.headerContent button{
+.headerContent a button{
     padding: 10px 50px;
     border: none;
     background-color: #FEBD59;
@@ -116,7 +143,7 @@ header nav ul li a:hover{
     transition: .3s;
 }
 
-.headerContent button:hover{
+.headerContent a button:hover{
     background-color: #ffad32;
     transition: .3s;
 }
@@ -222,7 +249,6 @@ header nav ul li a:hover{
     align-items: center;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 8px;
-    position: relative;
 }
 
 .plan h2{
@@ -305,14 +331,6 @@ header nav ul li a:hover{
         background-color: white;
         color: black;
     }
-}
-
-.plan .recommended{
-    font-size: 20px;
-    color: #ffffff;
-    font-weight: 600;
-    position: absolute;
-    top: 30px;
 }
 
 /* Avalie Nos */
@@ -537,6 +555,109 @@ footer{
     align-items: center;
 }
 
+/* Janela Modal */
+
+.modalWindow{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.405);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    backdrop-filter: blur(5px);
+}
+
+.modalWindow.openModal{
+    display: flex;
+}
+
+.moreInfo{
+    width: 80%;
+    min-width: 450px;
+    min-height: 400px;
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.fechar{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #FEBD59;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.moreInfo{
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    gap: 50px;
+}
+
+.infoTitles{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid #FEBD59;
+    padding-right: 50px;
+}
+
+.planAcess{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.planAcess h3{
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.infoTitles h2{
+    font-size: 45px;
+}
+
+.infoTitles h1{
+    font-size: 70px;
+}
+
+#modalDuracao{
+    color: #898989;
+    padding-bottom: 20px;
+}
+
+.subscribePlan{
+    margin-top: 20px;
+    border: none;
+    width: 200px;
+    height: 35px;
+    background-color: #FEBD59;
+    border-radius: 10px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.subscribePlan:hover{
+    background-color: #ffa620;
+    transition: .3s;
+}
+
 /* Responsivo */
 
 @media (max-width: 1300px){
@@ -618,6 +739,11 @@ footer{
     .contactText, .sendMessage{
         width: 100%;
     }
+
+    .btnTop{
+        height: 60px;
+        width: 60px;
+    }
 }
 
 @media (max-width: 550px){
@@ -665,6 +791,11 @@ footer{
     }
     .sendMessage{
         width: 300px;
+    }
+
+    .btnTop{
+        width: 55px;
+        height: 55px;
     }
 }
 

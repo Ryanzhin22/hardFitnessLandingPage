@@ -12,6 +12,9 @@
     <title>HardFitness</title>
 </head>
 <body>
+    <div class="btnTop">
+        <a href="#top"><i class="fa-solid fa-arrow-up fa-2x"></i></a>
+    </div>
     <header>
         <div class="container">
             <nav>
@@ -29,7 +32,7 @@
                 <h3>HARD FITNESS</h3>
                 <h1>Comprometida com nossos alunos</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni obcaecati, mollitia maiores ad enim itaque, minus distinctio dolor excepturi nam doloremque soluta inventore voluptatum ea magnam nobis fugiat, impedit in.</p>
-                <button>Venha Treinar 💪</button>
+                <a href="#plansPricing"><button>Venha Treinar 💪</button></a>
             </div>
         </div>
     </header>
@@ -62,38 +65,37 @@
                         <button>Assinar</button>
                         <div class="planMoreInfo">
                             <p>Duração de 30 dias</p>
-                            <h3>Mais sobre o plano</h3>
+                            <h3 id="moreInfo">Mais sobre o plano</h3>
                         </div>
                     </div>
                     <div class="plan lightGray">
-                        <h2>Plano Mensal</h2>
-                        <h1>R$80,00</h1>
+                        <h2>Plano Trimestral</h2>
+                        <h1>R$75,00</h1>
                         <p>por mês</p>
                         <button>Assinar</button>
                         <div class="planMoreInfo">
-                            <p>Duração de 30 dias</p>
-                            <h3>Mais sobre o plano</h3>
+                            <p>Duração de 3 meses</p>
+                            <h3 id="moreInfo2">Mais sobre o plano</h3>
                         </div>
                     </div>
                     <div class="plan gray">
-                        <h2>Plano Mensal</h2>
-                        <h1>R$80,00</h1>
+                        <h2>Plano Semestral</h2>
+                        <h1>R$70,00</h1>
                         <p>por mês</p>
                         <button>Assinar</button>
                         <div class="planMoreInfo">
-                            <p>Duração de 30 dias</p>
-                            <h3>Mais sobre o plano</h3>
+                            <p>Duração de 6 meses</p>
+                            <h3 id="moreInfo3">Mais sobre o plano</h3>
                         </div>
                     </div>
                     <div class="plan orange">
-                        <p class="recommended">Recomendado</p>
-                        <h2>Plano Mensal</h2>
-                        <h1>R$80,00</h1>
+                        <h2>Plano Anual</h2>
+                        <h1>R$65,00</h1>
                         <p>por mês</p>
                         <button>Assinar</button>
                         <div class="planMoreInfo">
-                            <p>Duração de 30 dias</p>
-                            <h3>Mais sobre o plano</h3>
+                            <p>Duração de 12 meses</p>
+                            <h3 id="moreInfo4">Mais sobre o plano</h3>
                         </div>
                     </div>
                 </div>
@@ -162,6 +164,25 @@
     <div class="copyright">
         <p>Site criado e desenvolvido por &copy;Ryan</p>
     </div>  
+
+    <div class="modalWindow" id="modalWindow">
+        <div class="moreInfo">
+            <button class="fechar" id="fechar">X</button>
+            <div class="infoTitles">
+                <h2 id="modalTitle">Plano Mensal</h2>
+                <h1 id="modalValor">100,00</h1>
+                <p id="modalDuracao">Duração: 30 dias</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor veniam assumenda ullam. Quae id quod ducimus nemo nihil veritatis earum labore repellat voluptatum, alias ut, perferendis corrupti provident distinctio voluptatem.</p>
+                <button class="subscribePlan">Assinar Plano!</button>
+            </div>
+            <div class="planAcess">
+                <h3>Mais informações sobre o plano</h3>
+                <p>Nesse plano você terá acesso academia toda com todos os equipamentos e mais a ajuda dos professores, além de uma sala com máquinas de bicicleta e esteiras.</p>
+                <p>Além de todos os equipamentos necessários para o desenvolvimento dos exercícios e lógicamento toda a planilha de treino necessária que levará você ao tão sonhado shape 💪</p>
+                <p id="discount">Não perca tempo e assine já! Esse plano será cobrado de mês em mês, portanto nenhum desconto será oferecido.</p>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
