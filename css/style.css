@@ -658,6 +658,21 @@ footer{
     transition: .3s;
 }
 
+@keyframes abrirModal{
+    from{
+        opacity: 0;
+        transform: translate3d(0px, -20px, -5px);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.openModal .moreInfo{
+    animation: abrirModal 0.5s;
+}
+
 /* Responsivo */
 
 @media (max-width: 1300px){
