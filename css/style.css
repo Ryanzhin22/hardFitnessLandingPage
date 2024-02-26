@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 .btnTop{
     position: fixed;
     background-color: #FEBD59;
@@ -19,6 +24,11 @@
     align-items: center;
     visibility: hidden;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.btnTop:hover{
+    background-color: #f1a93c;
+    transition: .3s;
 }
 
 .visible{
@@ -41,7 +51,6 @@ header{
     height: 80vh; 
     position: relative;
     font-family: "Poppins", sans-serif;
-    /* Analisa HEIGHT com VH no responsivo */
 }
 
 .container{
@@ -74,6 +83,7 @@ header nav {
     display: none;
     cursor: pointer;
     transition: .2s;
+    z-index: 999;
 }
 
 .navMenu:hover{
@@ -357,9 +367,11 @@ header nav ul li a:hover{
     padding: 10px 20px;
 }
 
-.rateUsImg{
+.rateUsImg img{
     display: flex;
     justify-content: center;
+    max-width: 600px;
+    max-height: 400px;
 }
 
 .rateUsText h1{
@@ -503,7 +515,7 @@ header nav ul li a:hover{
 .sendMessage input[type=submit]{
     cursor: pointer;
     width: 200px;
-    background-color: #ffdaa2;
+    background-color: #ffb94f;
     color: white;
     font-weight: 600;
     font-family:  "Poppins", sans-serif;
@@ -511,7 +523,7 @@ header nav ul li a:hover{
 }
 
 .sendMessage input[type=submit]:hover{
-    background-color: #FEBD59;
+    background-color: #ffa41d;
     transition: .3s;
 }
 
@@ -692,8 +704,35 @@ footer{
 
 @media (max-width: 1000px){
     header nav ul{
-        display: none;
+        flex-direction: column;
+        position: fixed;
+        gap: 0;
+        top: 0;
+        right: 0;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 40vh;
+        background-color: #ffae34;
+        transform: translateX(100%);
+        transition: transform .2s ease;
     }
+
+    header nav ul li a{
+        font-size: 18px;
+        border-bottom: 2px solid white;
+    }
+
+    header nav ul li a:hover{
+        color: #eeeeee;
+        border-bottom: 2px solid #eeeeee;
+    }
+
+    header nav ul.active{
+        transform: translateX(0);
+        transition: transform .2s ease;
+    }
+
     .navMenu{
         display: block;
     }
@@ -718,6 +757,13 @@ footer{
     }
     .sendMessage{
         width: 350px;
+    }
+
+    #modalTitle{
+        font-size: 30px;
+    }
+    #modalValor{
+        font-size: 50px;
     }
 }
 
@@ -758,6 +804,29 @@ footer{
     .btnTop{
         height: 60px;
         width: 60px;
+    }
+
+    .moreInfo{
+        width: 98%;
+    }
+    #modalValor{
+        font-size: 40px;
+    }
+
+    .fechar{
+        top: -10px;
+        right: -3px;
+    }
+
+    .rateUsImg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rateUsImg img{
+        max-width: 300px;
+        max-height: 200px;
     }
 }
 
@@ -811,6 +880,48 @@ footer{
     .btnTop{
         width: 55px;
         height: 55px;
+    }
+
+    .moreInfo{
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        min-width: 200px;
+        height: 90%;
+        gap: 5px;
+        padding: 10px;
+        justify-content: center;
+    }
+    .infoTitles, .planAcess{
+        width: 100%;
+    }
+    .infoTitles{
+        border: none;
+        padding: 0px;
+    }
+    .infoTitles p{
+        font-size: 14px;
+    }
+    .infoTitles #modalValor{
+        font-size: 30px;
+    }
+    .infoTitles #modalTitle{
+        font-size: 20px;
+    }
+
+    .planAcess p, .planAcess li{
+        font-size: 14px;
+        list-style-type: none;
+    }
+    .planAcess h3{
+        font-size: 25px;
+        padding: 0px;
+    }
+}
+
+@media (max-width: 350px){
+    .textRemove{
+        display: none;
     }
 }
 

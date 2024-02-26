@@ -9,6 +9,9 @@ const modalDuracao = document.getElementById("modalDuracao")
 const modalTitle = document.getElementById("modalTitle")
 const discount = document.getElementById("discount")
 
+const navList = document.getElementById("navList")
+const navMenu = document.getElementsByClassName("navMenu")[0]
+
 const discountParagraph = [
     "Não perca tempo e assine já! Esse plano será cobrado de mês em mês, portanto nenhum desconto será oferecido.",
     "Não perca tempo e assine já! Esse plano será cobrado de 3 meses em 3 meses, portanto te oferecemos um desconto $5 por mês! Resultando num total de $15 ao todo.",
@@ -22,6 +25,17 @@ window.addEventListener("scroll", ()=>{
     } else{
         btnTop.classList.add("visible")
     }
+})
+
+navMenu.addEventListener("click", ()=>{
+    navList.classList.toggle("active")
+})
+
+const menuLinks = document.querySelectorAll("#navList a[href^='#']")
+menuLinks.forEach((link)=>{
+    link.addEventListener("click", ()=>{
+        navList.classList.remove('active')
+    })
 })
 
 modal.addEventListener("click", (e)=>{
