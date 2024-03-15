@@ -6,4 +6,5 @@ Tive a ideia de criar essa página com base na falta de presença digital da min
 ## Identidade Visual:
 ![Screenshot_79](https://github.com/Ryanzhin22/hardFitnessLandingPage/assets/103447125/e3a0cf3e-6803-4bdf-8124-d4db7cd33457)
 
-## 
+## Acesse o deploy!
+[Deploy Hard Fitness](https://ryanzhin22.github.io/hardFitnessLandingPage/)
