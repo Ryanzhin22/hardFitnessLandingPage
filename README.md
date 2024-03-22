@@ -1,4 +1,4 @@
-# hardFitnessLandingPage
+# Landing Page Hard Fitness
 
 ## O que é Hard Fitness?
 Tive a ideia de criar essa página com base na falta de presença digital da minha academia. Peguei os elementos visuais do instagram e do estabelecimento físico e com base nos meus conhecimentos de criação de landing page continuei o desenvolvimento de um projeto "real" que iria me render grande experiência de como criar desde o começo uma page de Frontend!
