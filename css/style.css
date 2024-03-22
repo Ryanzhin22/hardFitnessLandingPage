@@ -564,6 +564,20 @@ footer {
   gap: 14px;
 }
 
+.socialMedias a {
+  color: white;
+}
+
+.socialMedias a i {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.socialMedias a i:hover {
+  transition: 0.3s;
+  color: #febd59;
+}
+
 .copyright {
   background-color: black;
   height: 3vh;
